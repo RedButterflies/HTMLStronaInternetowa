@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=true">
+ <title>Kreator pizzy</title>
+ <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+	<link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+  </head>
+    <body>
+        <header><h1><strong>Kreator pizzy</strong></h1></header>
+        <section id="formularz">
+   <form method="POST" action="mailto:s99208@pollub.edu.pl">
+       <fieldset>
+           <legend><strong>Rozmiar:</strong></legend>
+      <label for="rozmiar_mala"><input type="radio" id="rozmiar_mala" name="rozmiar" value="mala"><strong>Mała</strong></label>
+      <label for="rozmiar_srednia"><input type="radio" id="rozmiar_srednia" name="rozmiar" value="srednia"><strong>Średnia</strong></label>
+      <label for="rozmiar_duza"><input type="radio" id="rozmiar_duza" name="rozmiar" value="duza"><strong>Duża</strong></label>
+           </fieldset>
+  <fieldset>
+      <legend><strong>Dodatki:</strong></legend>
+      <label for="dodatek_szynka"><input type="checkbox" id="dodatek_szynka" name="dodatki[]" value="szynka"><strong>Szynka</strong></label><br>
+    <label for="dodatek_salami"><input type="checkbox" id="dodatek_salami" name="dodatki[]" value="salami"><strong>Salami</strong></label><br>
+    <label for="dodatek_boczek"><input type="checkbox" id="dodatek_boczek" name="dodatki[]" value="boczek"><strong>Boczek</strong></label><br>
+    <label for="dodatek_papryka"><input type="checkbox" id="dodatek_papryka" name="dodatki[]" value="papryka"><strong>Papryka</strong></label><br>
+    <label for="dodatek_pomidor"><input type="checkbox" id="dodatek_pomidor" name="dodatki[]" value="pomidor"><strong>Pomidor</strong></label><br>
+    <label for="dodatek_ser"><input type="checkbox" id="dodatek_ser" name="dodatki[]" value="ser"><strong>Ser</strong></label><br>
+  </fieldset>
+    <fieldset>
+        <legend><strong>Sosy:</strong></legend>
+        <label for="sosy"><strong>Wybierz sos:</strong></label>
+    <select id="sosy" name="sosy[]" multiple>
+      <option value="pomidorowy">Pomidorowy</option>
+      <option value="czosnkowy">Czosnkowy</option>
+      <option value="ketchup_lagodny">Ketchup łagodny</option>
+      <option value="ketchup_pikantny">Ketchup pikantny</option>
+      <option value="ostry">Ostry</option>
+      <option value="Musztardowy">Musztardowy</option>
+      <option value="Barbecue">Barbecue</option>
+      <option value="Śmietanowy">Śmietanowy</option>
+    </select>
+      <br>
+      <label><strong>Inne uwagi:</strong></label>
+    <textarea id="uwagi" name="uwagi" rows="5" cols="70"></textarea>
+  </fieldset>
+       <br>
+  <input type="reset" value="Wyczyść dane">
+  <input type="submit" value="Wyślij zamówienie">
+</form>
+
+        </section>
+    </body>
+</html>
