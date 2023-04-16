@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=true">
+    <title>Formularze</title>
+	<link rel="stylesheet" href="CSS/style.css" type="text/css" />
+	<link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+  </head>
+  <body>
+  <section id="kontener">
+    <header id="baner">
+      <h1><strong>Szybki kurs HTML</strong></h1>
+    </header>
+	  <nav id="menu">
+      <ul id="nav">
+		 <li><a href="index.html">Podstawy</a></li>
+		 <li><a href="tabele.html">Tabele</a></li>
+		 <li><a href="">Formularze</a>
+		 <ul>
+		 <li><a href="formularze.html" >Pola formularza</a></li>
+		 <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+		 </ul>
+		 </li>
+		 <li><a href="galeria.html" title="">Galeria</a></li>
+	    </ul>
+	  </nav>
+     <section id="tresc">
+	  <h2><strong>Podstawowe znaczniki formularza HTML to: </strong></h2>
+	  <ul>
+              <li><strong>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</strong></li>
+              <li><strong>&lt;input&gt; - znacznik umożliwiający wstawienie różnych pól (pole tekstowe, przycisk typu radio, przycisk typu checkbox) w zależności od wartości jego atrybutu type</strong></li>
+              <li><strong>&lt;select&gt; - pole formularza typu lista rozwijana</strong></li>
+              <li><strong>&lt;textarea&gt; - pole formularza typu obszar tekstowy</strong> </li>
+              <li><strong>&lt;button&gt; - pole formularza typu przycisk</strong></li>
+        </ul>
+     
+     <section id="formularz">
+	  <h2><strong>Przykładowy formularz HTML:</strong></h2>
+    
+     <form action="mailto:s99208@pollub.edu.pl" method="post">
+  <table>
+    <tr>
+      <td><label for="nazwisko"><strong>Nazwisko:</strong></label></td>
+	  <td><input type="text" name="nazwisko" id="nazwisko" pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,}([- ][A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,})?" required minlength="2" maxlength="50"  title="Wprowadz swoje nazwisko"></td>
+    </tr>
+    <tr>
+      <td><label for="wiek"><strong>Wiek:</strong></label></td>
+      <td><input type="number" name="wiek" id="wiek" min="18" max="120" title="Minimalny wiek to 18 lat" placeholder="min.18 lat"></td>
+    </tr>
+    <tr>
+      <td><label for="panstwo"><strong>Państwo:</strong></label></td>
+      <td>
+        <select name="panstwo" id="panstwo"  title="Wybierz kraj z listy" required>
+          <option value="">Wybierz</option>
+          <option value="Polska">Polska</option>
+          <option value="Niemcy">Niemcy</option>
+          <option value="Francja">Francja</option>
+          <option value="Włochy">Włochy</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="email"><strong>Adres e-mail:</strong></label></td>
+	  <td><input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Wprowadz email" placeholder="format: xxx@domena.pl" required></td>
+      
+   </tr>
+  </table>
+  <br>
+  <h3><strong>Zamawiam tutorial z języka:</strong></h3>
+  <input type="checkbox" id="php" name="jezyki[]" value="PHP">
+  <label for="php"><strong>PHP</strong></label>
+  <input type="checkbox" id="cpp" name="jezyki[]" value="C/C++">
+  <label for="cpp"><strong>C/C++</strong></label>
+  <input type="checkbox" id="java" name="jezyki[]" value="Java">
+  <label for="java"><strong>Java</strong></label><br>
+  <h4><strong>Sposób zapłaty:</strong></h4>
+  <input type="radio" id="eurocard" name="platnosc" value="eurocard" >
+  <label for="eurocard"><strong>eurocard</strong></label>
+  <input type="radio" id="visa" name="platnosc" value="visa">
+  <label for="visa"><strong>visa</strong></label>
+  <input type="radio" id="przelew_bankowy" name="platnosc" value="przelew bankowy">
+  <label for="przelew_bankowy"><strong>przelew bankowy</strong></label><br>
+  <input type="submit" value="Wyślij">
+  <input type="reset" value="Anuluj">
+</form>
+
+		</section>
+		</section>
+		
+      <br>
+      <section id="stopka"><footer><strong>&copy;BP</strong></footer></section>
+	  </section>
+	  </body>
+</html>
