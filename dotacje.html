@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Formularz dotacji dla organizacji pozarządowej</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <h2><strong>Formularz dotacji</strong></h2>
+    </div>
+    <div>
+        <form action="mailto:s99208@pollub.edu.pl" method="post">
+            <fieldset>
+                <label for="beneficjent">Beneficjent:</label>
+                <input type="text" id="beneficjent" title="Wpisz nazwę organizacji, która otrzyma dotację" name="beneficjent" list="lista_organizacji" required>
+                <datalist id="lista_organizacji">
+                    <option value="Wioski Dziecięce SOS">
+                    <option value="Children's Aid International">
+                    <option value="SOS Kaczki">
+                    <option value="We Stand United">
+                </datalist>
+                <br>
+                <label for="wielkosc_dotacji">Wartość dotacji:</label>
+                <input title="Podaj wartość dotacji większą lub równą 20" type="number" id="wielkosc_dotacji" name="wielkosc_dotacji" min="20" step="1" required>
+                <br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Dane karty płatniczej</legend>
+                <label>Karta:</label>
+                <input type="radio" id="visa" name="karta" title="Wybierz rodzaj karty płatniczej" value="visa" required>
+                <label for="visa">Visa</label>
+                <input type="radio" id="mastercard" name="karta" title="Wybierz rodzaj karty płatniczej" value="mastercard">
+                <label for="mastercard">Mastercard</label><br>
+                <label for="numer_karty">Numer:</label>
+                <input type="text" id="numer_karty" name="numer_karty" title="Podaj numer karty płatniczej składający się z 13 lub 16 cyfr" pattern="[0-9]{13,16}" required>
+                <br>
+                <label for="data_waznosci">Data ważności:</label>
+                <input type="month" id="data_waznosci" name="data_waznosci" title="Podaj datę ważności karty płatniczej" required>
+                <br>
+                <label for="cvv">Kod CVV:</label>
+                <input type="text" id="cvv" name="cvv" title="Podaj kod CVV złożony z 3 lub 4 cyfr podanych na odwrocie karty" pattern="[0-9]{3,4}" required>
+                <br>
+            </fieldset>
+            <br>
+            <label for="darczyńca">Darczyńca:</label>
+            <input type="text" id="darczyńca" name="darczyńca" title="Podaj imię i nazwisko darczyńcy lub nazwę firmy darczyńcy" pattern=".{3,}" required>
+		<br>
+		<br>
+		<input type="submit" value="Rejestruj">
+	</form>
+	</div>
+</body>
+</html>
+
+
